@@ -10,7 +10,7 @@
 	<h1>Bem vindo!</h1>
 	
 
-	<%@include file="WEB-INF/jspf/tabela.jspf"%>
+	<a href="./tabela-price.jsp">Acessar tabela: </a>
 
 
 	<%@include file="WEB-INF/jspf/footer.jspf"%>

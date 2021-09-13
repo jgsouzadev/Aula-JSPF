@@ -1,8 +1,5 @@
 <%@ page pageEncoding="UTF-8"%>
-
-<header>
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</header>
+<%@ page import="java.time.LocalDate";%>
+<footer>
+	Aula JSP - 13/09/2021
+</footer>
