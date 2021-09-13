@@ -12,5 +12,5 @@
 </form>
 
 <ul class="nav navbar-nav">
-	<li><a href="WEB-INF/index.jsp"><button>Voltar</button></a></li>
+	<li><a href="./index.jsp"><button>Voltar</button></a></li>
 </ul>
