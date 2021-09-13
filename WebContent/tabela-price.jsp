@@ -5,18 +5,33 @@
 <%@ page import="java.util.Locale"%>
 
 <%
-double valor = Double.parseDouble(request.getParameter("valor"));
-final double juros = Double.parseDouble(request.getParameter("juros"));
-final int meses = Integer.parseInt(request.getParameter("meses"));
-final double juros2 = juros / 100;
-final double poten1 = Math.pow((1 + juros2), meses) * juros2;
-final double poten2 = Math.pow((1 + juros2), meses) - 1;
-final double parcela = valor * (poten1 / poten2);
-double devedor = (valor - parcela);
-double juros3 = valor * juros2;
-final double parcela2 = valor - devedor;
-int i = 1;
+
+double valor = 0;
+double juros = 0;
+double juros2= 0;
+double juros3 = 0;
+int meses = 0;
+double poten1 = 0;
+double poten2 = 0;
+double parcela = 0;
+double devedor = 0;
+double parcela2 = 0;
 NumberFormat dinheiro = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+int i = 1;
+
+if(request.getParameter("valor") != null) {
+valor = Double.parseDouble(request.getParameter("valor"));
+juros = Double.parseDouble(request.getParameter("juros"));
+meses = Integer.parseInt(request.getParameter("meses"));
+juros2 = juros / 100;
+poten1 = Math.pow((1 + juros2), meses) * juros2;
+poten2 = Math.pow((1 + juros2), meses) - 1;
+parcela = valor * (poten1 / poten2);
+devedor = (valor - parcela);
+juros3 = valor * juros2;
+parcela2 = valor - devedor;
+}
+
 %>
 
 <html>
@@ -27,7 +42,7 @@ NumberFormat dinheiro = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"))
 <body>
 
 	<%@include file="WEB-INF/jspf/header.jspf"%>
-
+	<%@include file="WEB-INF/jspf/tabela.jspf"%>
 	<h4>
 		Valor a financiar:
 		<%=(dinheiro.format(valor))%></h4>
@@ -98,8 +113,6 @@ NumberFormat dinheiro = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"))
 			%>
 		</tbody>
 	</table>
-
-	<%@include file="WEB-INF/jspf/tabela.jspf"%>
 	<%@include file="WEB-INF/jspf/footer.jspf"%>
 </body>
 </html>
