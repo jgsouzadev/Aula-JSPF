@@ -12,5 +12,5 @@
 </form>
 
 <ul class="nav navbar-nav">
-	<li><a href="WEB-INF/jspf/tabela.jspf"><button>Voltar</button></a></li>
+	<li><a href="WEB-INF/jspf/index.jspf"><button>Voltar</button></a></li>
 </ul>
