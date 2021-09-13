@@ -1,0 +1,16 @@
+
+<hr><hr>
+<h1><bold>Novo cálculo</bold></h1>
+<form action="tabela-price.jsp">
+	<h4>Valor a financiar (R$):</h4>
+	<input type="name" name="valor" /> <br>
+	<h4>Taxa de juros mensal %:</h4>
+	<input type="text" name="juros" /> <br>
+	<h4>Quantidade de meses:</h4>
+	<input type="number" name="meses" /> <br> <input type="submit"
+		name="random" value="calcular" />
+</form>
+
+<ul class="nav navbar-nav">
+	<li><a href="WEB-INF/jspf/tabela.jspf"><button>Voltar</button></a></li>
+</ul>
